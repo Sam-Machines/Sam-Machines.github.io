@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
   <script>
@@ -146,7 +146,7 @@
   successful sign in -->
   <div id="gSignInWrapper">
     <span class="label">Sign in with:</span>
-    <div id="customBtn" class="customGPlusSignIn">
+    <div id="customBtn" class="g-signin2">
       <span class="icon"></span>
       <span class="buttonText">Google</span>
     </div>
@@ -154,11 +154,7 @@
   <div id="name"></div>
   <script>startApp();</script>
   </a>
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Dropdown
-    <i class="fa fa-caret-down"></i>
-  </button>
-<a href="#" onclick="signOut();">Sign out</a>
+  <a href="#" onclick="signOut();">Sign out</a>
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -166,7 +162,11 @@
       console.log('User signed out.');
     });
   }
-</script>    
+</script>      
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
   <div class="dropdown-content" id="myDropdown">
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>
