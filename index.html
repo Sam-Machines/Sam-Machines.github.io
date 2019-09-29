@@ -12,7 +12,7 @@
     gapi.load('auth2', function(){
       // Retrieve the singleton for the GoogleAuth library and set up the client.
       auth2 = gapi.auth2.init({
-        client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+        client_id: '672039190358-s7ia62m9ldg8oc84n65j2p7f7tlsudcs.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
         // Request scopes in addition to 'profile' and 'email'
         //scope: 'additional_scope'
@@ -158,6 +158,15 @@
   <button class="dropbtn" onclick="myFunction()">Dropdown
     <i class="fa fa-caret-down"></i>
   </button>
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>    
   <div class="dropdown-content" id="myDropdown">
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>
