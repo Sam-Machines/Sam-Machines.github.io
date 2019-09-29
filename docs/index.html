@@ -108,29 +108,24 @@ window.onclick = function(e) {
   }
 }
 </script>
-<body>
-  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
-
-    <!-- Previously loaded Firebase SDKs -->
-
-  <script>
-    // TODO: Replace the following with your app's Firebase project configuration
-    var firebaseConfig = {
-      // ...
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-</body>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBvTMUtsi2CVnvd9D023e5Ix4d0tNGdohg",
+    authDomain: "sams-machines.firebaseapp.com",
+    databaseURL: "https://sams-machines.firebaseio.com",
+    projectId: "sams-machines",
+    storageBucket: "",
+    messagingSenderId: "672039190358",
+    appId: "1:672039190358:web:5f61e5d8f499246d1b20f7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
